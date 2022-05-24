@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//css/bootstrap.min.css">
+    <script src="..//js/jquery-3.6.0.min.js"></script>
+    <script src="..//js/bootstrap.min.js"></script>
+    <script src="..//js/index3.js"></script>
+    <style>
+        li a {
+            color: white;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        .dropdown-menu a {
+            font-weight: bold;
+            color: white;
+        }
+
+        .dropdown-menu a:hover {
+            color: black;
+        }
+
+        .dropdown-menu {}
+
+        ol li a {
+            font-style: italic;
+        }
+
+        th {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="container">
+            <div class="row align-items-center bg-dark">
+                <div class="col-md-3">
+                    <img src="..//img/logo.PNG" alt="" srcset="">
+                </div>
+                <div class="col-md-9 text-center">
+                    <h3>ĐOÀN THANH NIÊN THÀNH PHỐ HỒ CHÍ MINH</h3>
+                    <h5 class="text-danger">ĐOÀN THANH NIÊN TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</h5>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg" style="background-color:coral">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="">HELP</a></li>
+                <li class="nav-item"><a class="nav-link" href="">CONTACT</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropMenuLink" href="" data-toggle="dropdown">ACTIVITIES</a>
+                    <div class="dropdown-menu" aria-labelledby="dropMenuLink"
+                        style="background-color:coral; margin: 7px;">
+                        <a class="dropdown-item" data-toggle="modal" href="" data-target="#myModal" id="btn2">Online</a>
+                        <a class="dropdown-item" data-toggle="modal" href="">Offline</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="row align-items-center bg-dark">
+                <div class="col-md-6">
+                    <img src="..//img/ngayhoithanhnien.JPG" alt="" srcset="" style="border-radius: 50%;"
+                        class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3 style="margin:2px ; color: aliceblue;">TIN NỔI BẬT</h3>
+                    <div class="box-content" style="background-color:coral; width:100%">
+                        <ol style="list-style-type: upper-roman;font-weight: bold;">
+                            <li><a href="" class="nav-link">Mùa hè xanh</a></li>
+                            <li><a href="" class="nav-link">Thanh niên tình nguyện</a></li>
+                            <li><a href="" class="nav-link">Tấm lòng vàng</a></li>
+                            <li><a href="" class="nav-link">Hiến máu nhân đạo</a></li>
+                            <li><a href="" class="nav-link">Bảo vệ môi trường sạch</a></li>
+                            <li><a href="" class="nav-link">Thi đua lập thành tích chào mừng 26/3</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h3 class="text-center w-100" style="margin: 2px;color:cornflowerblue">DANH SÁCH ĐĂNG KÍ HOẠT ĐỘNG MÙA HÈ
+                XANH</h3>
+            <div class="col-md-12">
+                <table class="table table-striped bg-dark" role="table" id="danhSach">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã SV</th>
+                            <th>Tên SV</th>
+                            <th>Ngày tham gia</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                            <th>Ảnh đại diện</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="text-center w-100 text-danger">
+                            THÔNG TIN SINH VIÊN
+                        </h3>
+                        <button class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="">Mã Sinh Viên</label>
+                                <input type="text" class="form-control" id="txtMa" placeholder="Mã sinh viên">
+                                <p id="tbMa" class="text-danger">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Tên Sinh Viên</label>
+                                <input class="form-control" type="text" id="txtName" placeholder="Tên sinh viên">
+                                <p class="text-danger" id="tbName">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Ngày Tham Gia</label>
+                                <input type="date" id="txtDate" class="form-control">
+                                <p class="text-danger" id="tbDate">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="text" class="form-control" id="txtMail">
+                                <p class="text-danger" id="tbMail">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Số Điện Thoại</label>
+                                <input type="text" class="form-control" id="txtSdt">
+                                <p class="text-danger" id="tbSdt">*</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Ảnh Đại Diện</label>
+                                <input type="file" class="form-control" id="txtAdd">
+                                <p class="text-danger" id="tbAdd">*</p>
+                            </div>
+                        </form>
+                        <div class="modal-footer">
+                            <button id="Save" class="btn btn-danger w-100" style="font-family:'Times New Roman', Times, serif ; font-weight: 1500 ;">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
